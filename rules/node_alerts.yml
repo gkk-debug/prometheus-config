@@ -1,0 +1,66 @@
+groups:
+- name: node-exporter-alerts
+  rules:
+
+  - alert: InstanceDown
+    expr: up == 0
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Server {{ $labels.name }} is DOWN"
+      description: "{{ $labels.name }} ({{ $labels.instance }}) is unreachable"
+
+  - alert: HighCPUUsage
+    expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 85
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High CPU usage on {{ $labels.name }}"
+      description: "CPU usage is above 85% on {{ $labels.name }}"
+
+  - alert: HighMemoryUsage
+    expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 90
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High Memory usage on {{ $labels.name }}"
+      description: "Memory usage is above 90% on {{ $labels.name }}"
+
+  - alert: DiskSpaceLow
+    expr: (node_filesystem_avail_bytes{fstype!~"tmpfs|overlay"} / node_filesystem_size_bytes{fstype!~"tmpfs|overlay"}) * 100 < 15
+    for: 5m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Low disk space on {{ $labels.name }}"
+      description: "Less than 15% disk space left on {{ $labels.name }}"
+
+  - alert: HighLoadAverage
+    expr: node_load1 > 2
+    for: 5m
+    labels:
+      severity: warning
+    annotations:
+      summary: "High load on {{ $labels.name }}"
+      description: "Load average is high on {{ $labels.name }}"
+
+  - alert: NodeFilesystemReadOnly
+    expr: node_filesystem_readonly == 1
+    for: 1m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Filesystem read-only on {{ $labels.name }}"
+      description: "Filesystem has become read-only"
+
+  - alert: NodeSystemdServiceFailed
+    expr: node_systemd_unit_state{state="failed"} == 1
+    for: 2m
+    labels:
+      severity: warning
+    annotations:
+      summary: "Systemd service failed on {{ $labels.name }}"
+      description: "A systemd service is in failed state"
