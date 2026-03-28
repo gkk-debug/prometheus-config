@@ -15,6 +15,7 @@ alerting:
 # Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
 rule_files:
   - /opt/prometheus/rules/alerts.yml
+  - /opt/prometheus/rules/node_alerts.yml
 
 # A scrape configuration containing exactly one endpoint to scrape:
 # Here it's Prometheus itself.
