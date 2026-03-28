@@ -31,8 +31,5 @@ scrape_configs:
           app: "prometheus"
 
   - job_name: 'node'
-    static_configs:
-      - targets: ['192.168.10.50:9100']
-      - targets: ['192.168.10.51:9100']
-      - targets: ['192.168.10.29:9100']
-
+    - files:
+          - /opt/prometheus/targets/node_exporters.yml
