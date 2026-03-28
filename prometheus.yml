@@ -31,5 +31,6 @@ scrape_configs:
           app: "prometheus"
 
   - job_name: 'node'
-    - files:
+    file_sd_configs:
+      - files:
           - /opt/prometheus/targets/node_exporters.yml
