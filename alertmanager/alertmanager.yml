@@ -7,6 +7,6 @@ route:
 receivers:
   - name: teams
     webhook_configs:
-      - url: 'https://default62e46a17fc1149a6bd8701cc14bb0f.22.environment.api.powerplatform.com/powerautomate/automations/direct/workflows/564ba8c87cf74e6bac1e2c14dc8117d3/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=UxfhFcL8TaUnNbrDlaC5kOhyvRGzXQjzZp1HgxhJPE8'
+      - url: 'https://netspextechnologiesllp.webhook.office.com/webhookb2/f209c001-d0f5-4b27-8b44-47d077e94f96@62e46a17-fc11-49a6-bd87-01cc14bb0f22/IncomingWebhook/1e0444a568f94b4290ee69e9a1630a3b/549fce7a-9a73-47ef-86e4-415b2a1e8972/V2ITP99dLhvVe4WQql38X-LrGwnQ0euINb4U7byg2k6gk1'
         send_resolved: true
 #test
