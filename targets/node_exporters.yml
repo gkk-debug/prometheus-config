@@ -2,16 +2,22 @@
     - 192.168.10.29:9100
   labels:
     name: NSPXMUMNODE003
+    org: Netspex
     env: prod
+    role: infra
 
 - targets:
     - 192.168.10.50:9100
   labels:
     name: NSPXMUMPMDC001
+    org: Netspex
     env: prod
+    role: tools
 
 - targets:
     - 192.168.10.51:9100
   labels:
-    name: NSPXMUMPGFC001
+    name: NSPXMUMPGFDC001
+    org: Netspex
     env: prod
+    role: tools
