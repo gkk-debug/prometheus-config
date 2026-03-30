@@ -21,3 +21,19 @@
     org: Netspex
     env: prod
     role: tools
+
+- targets:
+    - 192.168.10.21:9100
+  labels:
+    name: gtbcc
+    org: Lab-GTB
+    env: dev
+    role: console
+
+- targets:
+    - 192.168.10.22:9100
+  labels:
+    name: gtbinspector
+    org: Netspex
+    env: dev
+    role: inspector
