@@ -36,3 +36,23 @@ scrape_configs:
     file_sd_configs:
       - files:
           - /opt/prometheus/targets/node_exporters.yml
+  - job_name: 'proxmox'
+    metrics_path: /pve
+    params:
+      module: [default]
+
+    file_sd_configs:
+      - files:
+          - /opt/prometheus/targets/pve_exporters.yml
+
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+
+      - source_labels: [__param_target]
+        target_label: instance
+
+      - target_label: __address__
+        replacement: 192.168.10.50:9221
+
+
