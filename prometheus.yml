@@ -65,12 +65,23 @@ scrape_configs:
           - /opt/prometheus/targets/blackbox_http.yml
 
     relabel_configs:
+      # pass target to blackbox
       - source_labels: [__address__]
         target_label: __param_target
 
+      # pass module (http_2xx)
       - source_labels: [module]
         target_label: __param_module
 
+      # ✅ ADD THIS (VERY IMPORTANT)
+      - source_labels: [__param_target]
+        target_label: target
+
+      # ✅ ADD THIS (for Grafana filtering)
+      - source_labels: [__param_target]
+        target_label: instance
+
+      # send to blackbox exporter
       - target_label: __address__
         replacement: 192.168.10.50:9115
 
