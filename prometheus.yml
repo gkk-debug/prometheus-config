@@ -58,19 +58,19 @@ scrape_configs:
         replacement: 192.168.10.50:9221
   
   - job_name: 'blackbox-http'
-  metrics_path: /probe
+    metrics_path: /probe
 
-  file_sd_configs:
-    - files:
-        - /opt/prometheus/targets/blackbox_http.yml
+    file_sd_configs:
+      - files:
+          - /opt/prometheus/targets/blackbox_http.yml
 
-  relabel_configs:
-    - source_labels: [__address__]
-      target_label: __param_target
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
 
-    - source_labels: [module]
-      target_label: __param_module
+      - source_labels: [module]
+        target_label: __param_module
 
-    - target_label: __address__
-      replacement: 192.168.10.50:9115
+      - target_label: __address__
+        replacement: 192.168.10.50:9115
 
