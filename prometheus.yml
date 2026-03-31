@@ -92,4 +92,4 @@ scrape_configs:
         target_label: instance
 
       - target_label: __address__
-        replacement: 192.168.10.50::9115
+        replacement: 192.168.10.50:9115
