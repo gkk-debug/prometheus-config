@@ -79,7 +79,7 @@ scrape_configs:
 
  #   file_sd_configs:
   #    - files:
-          - /opt/prometheus/targets/blackbox_tcp.yml
+      #    - /opt/prometheus/targets/blackbox_tcp.yml
 
    # relabel_configs:
     #  - source_labels: [__address__]
