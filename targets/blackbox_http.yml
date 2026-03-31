@@ -1,5 +1,6 @@
 - targets:
   - https://google.com
+  - https://facebook.com
   - https://192.168.10.21
   - https://192.168.10.22
   labels:
