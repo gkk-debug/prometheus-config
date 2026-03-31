@@ -1,6 +1,6 @@
 - targets:
   - https://google.com
-  - https://your-app.com
   - https://192.168.10.21
+  - https://192.168.10.22
   labels:
     module: http_2xx
