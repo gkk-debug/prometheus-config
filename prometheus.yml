@@ -36,6 +36,12 @@ scrape_configs:
     file_sd_configs:
       - files:
           - /opt/prometheus/targets/node_exporters.yml
+          
+  - job_name: 'process'
+    file_sd_configs:
+      - files:
+          - /opt/prometheus/targets/process_exporters.yml
+        
   - job_name: 'proxmox'
     metrics_path: /pve
     params:
