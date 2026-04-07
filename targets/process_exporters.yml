@@ -4,3 +4,22 @@
     org: prod
     node: app-server-1
     job: process-exporter
+    
+- targets:
+    - 192.168.10.11:9256
+  labels:
+    name: GTB-Console
+    org: GTB
+    env: Prod
+    role: console
+    job: process-exporter
+
+- targets:
+    - 192.168.10.12:9256
+  labels:
+    name: GTB-Inspector
+    org: GTB
+    env: Prod
+    role: inspector
+    job: process-exporter
+    
