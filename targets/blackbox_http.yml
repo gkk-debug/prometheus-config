@@ -1,7 +1,18 @@
 - targets:
-  - https://google.com
-  - https://facebook.com
-  - https://192.168.10.21
-  - https://192.168.10.22
+    - https://google.com
+    - https://facebook.com
+
   labels:
     module: http_2xx
+    env: internet
+
+- targets:
+    - https://192.168.10.21
+    - https://192.168.10.22
+    - https://192.168.10.11
+    - https://192.168.10.11
+
+  labels:
+    module: https_2xx_insecure
+    org: GTB
+    env: internal
