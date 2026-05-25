@@ -10,7 +10,7 @@
     - https://192.168.10.21
     - https://192.168.10.22
     - https://192.168.10.11
-    - https://192.168.10.11
+    - https://192.168.10.12
 
   labels:
     module: https_2xx_insecure
