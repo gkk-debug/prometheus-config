@@ -7,8 +7,6 @@
     env: internet
 
 - targets:
-    - https://192.168.10.21
-    - https://192.168.10.22
     - https://192.168.10.11
     - https://192.168.10.12
 
@@ -16,3 +14,13 @@
     module: https_2xx_insecure
     org: GTB
     env: internal
+
+- targets:
+    - https://192.168.10.21
+    - https://192.168.10.22
+
+  labels:
+    module: https_2xx_insecure
+    org: Lab-GTB
+    env: internal
+    
