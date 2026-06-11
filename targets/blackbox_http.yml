@@ -24,3 +24,11 @@
     org: Lab-GTB
     env: internal
     
+- targets:
+    - http://192.168.10.51:3000
+    - https://192.168.10.50:9090
+
+  labels:
+    module: http_2xx
+     org: Netspex
+    env: internet
