@@ -30,5 +30,5 @@
 
   labels:
     module: http_2xx
-     org: Netspex
+    org: Netspex
     env: internet
