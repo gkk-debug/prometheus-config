@@ -32,3 +32,11 @@
     module: http_2xx
     org: Netspex
     env: internet
+
+- targets:
+    - https://192.168.10.20:8081
+
+  labels:
+    module: http_2xx
+    org: Netspex
+    env: internet
