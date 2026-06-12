@@ -71,6 +71,14 @@
     role: tools
 
 - targets:
+    - 192.168.10.36:9100
+  labels:
+    name: NSPXMUMDRFS001
+    org: Netspex
+    env: prod
+    role: tools    
+
+- targets:
     - 192.168.10.37:9182
   labels:
     name: NSPXMUMDRAD001
