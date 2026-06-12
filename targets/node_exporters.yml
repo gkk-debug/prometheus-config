@@ -39,6 +39,14 @@
     role: tools
 
 - targets:
+    - 192.168.10.13:9182
+  labels:
+    name: NSPXMUMDCJB001
+    org: Netspex
+    env: prod
+    role: tools    
+
+- targets:
     - 192.168.10.16:9182
   labels:
     name: NSPXMUMDCAD001
