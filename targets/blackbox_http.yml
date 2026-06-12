@@ -34,7 +34,7 @@
     env: internet
 
 - targets:
-    - https://192.168.10.20:8081
+    - https://servicedesk.netspextech.com
 
   labels:
     module: http_2xx
