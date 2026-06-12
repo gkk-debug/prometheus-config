@@ -21,6 +21,14 @@
     org: Netspex
     env: prod
     role: tools
+    
+- targets:
+   - 192.168.10.38:9100
+  labels:
+    name: NSPXMUMDCFS001
+    org: Netspex
+    env: prod
+    role: tools
 
 - targets:
     - 192.168.10.51:9100
