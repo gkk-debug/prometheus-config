@@ -60,7 +60,7 @@
     name: NSPXMUMDCJB002
     org: Netspex
     env: prod
-    role: prod    
+    role: infra    
     
 - targets:
     - 192.168.10.20:9182
