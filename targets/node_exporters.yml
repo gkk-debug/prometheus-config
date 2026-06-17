@@ -44,7 +44,15 @@
     name: NSPXMUMDCJB001
     org: Netspex
     env: prod
-    role: infra    
+    role: infra  
+
+- targets:
+    - 192.168.10.14:9182
+  labels:
+    name: NSPXMUMDRJB001
+    org: Netspex
+    env: prod
+    role: infra     
 
 - targets:
     - 192.168.10.16:9182
