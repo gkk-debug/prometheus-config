@@ -53,6 +53,14 @@
     org: Netspex
     env: prod
     role: tools
+
+- targets:
+    - 192.168.10.17:9182
+  labels:
+    name: NSPXMUMDCJB002
+    org: Netspex
+    env: prod
+    role: prod    
     
 - targets:
     - 192.168.10.20:9182
