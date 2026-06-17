@@ -133,3 +133,11 @@
     org: GTB
     env: Prod
     role: inspector
+
+- targets:
+    - 192.168.70.15:9100
+  labels:
+    name: GTB-Console
+    org: Nodesec
+    env: Prod
+    role: tool   
