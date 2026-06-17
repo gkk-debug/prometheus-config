@@ -137,7 +137,15 @@
 - targets:
     - 192.168.70.15:9100
   labels:
-    name: GTB-Console
+    name: NSPXMUMDCNS005
     org: Nodesec
     env: Prod
     role: tool   
+
+- targets:
+    - 192.168.70.16:9100
+  labels:
+    name: NSPXMUMDCns006
+    org: Nodesec
+    env: Prod
+    role: tool     
