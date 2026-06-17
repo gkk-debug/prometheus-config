@@ -7,6 +7,38 @@
     role: infra
 
 - targets:
+    - 192.168.10.28:9100
+  labels:
+    name: NSPXMUMNODE002
+    org: Netspex
+    env: prod
+    role: infra 
+
+- targets:
+    - 192.168.10.27:9100
+  labels:
+    name: NSPXMUMNODE001
+    org: Netspex
+    env: prod
+    role: infra 
+
+- targets:
+    - 192.168.10.30:9100
+  labels:
+    name: NSPXMUMNODE004
+    org: Netspex
+    env: prod
+    role: infra
+
+- targets:
+    - 192.168.10.31:9100
+  labels:
+    name: NSPXMUMNODE005
+    org: Netspex
+    env: prod
+    role: infra    
+
+- targets:
     - 192.168.10.50:9100
   labels:
     name: NSPXMUMPMDC001
