@@ -44,7 +44,7 @@
     name: NSPXMUMDCJB001
     org: Netspex
     env: prod
-    role: infra  
+    role: tools 
 
 - targets:
     - 192.168.10.14:9182
@@ -52,7 +52,7 @@
     name: NSPXMUMDRJB001
     org: Netspex
     env: prod
-    role: infra     
+    role: tools     
 
 - targets:
     - 192.168.10.16:9182
@@ -68,7 +68,7 @@
     name: NSPXMUMDCJB002
     org: Netspex
     env: prod
-    role: infra    
+    role: tools    
     
 - targets:
     - 192.168.10.20:9182
