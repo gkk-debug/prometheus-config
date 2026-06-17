@@ -180,4 +180,12 @@
     name: NSPXMUMDCns006
     org: Nodesec
     env: Prod
-    role: tool     
+    role: tool 
+
+- targets:
+    - 192.168.80.5:9100
+  labels:
+    name: NSPXMUMDCLGS001
+    org: El Merito Logistics
+    env: Prod
+    role: tool    
