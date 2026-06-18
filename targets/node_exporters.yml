@@ -167,9 +167,25 @@
     role: inspector
 
 - targets:
+    - 192.168.70.13:9182
+  labels:
+    name: NSPXMUMNSJB003
+    org: Nodesec
+    env: Prod
+    role: tool   
+
+- targets:
+    - 192.168.70.14:9182
+  labels:
+    name: NSPXMUMNSJB004
+    org: Nodesec
+    env: Prod
+    role: tool       
+
+- targets:
     - 192.168.70.15:9100
   labels:
-    name: NSPXMUMDCNS005
+    name: NSPXMUMNSUB005
     org: Nodesec
     env: Prod
     role: tool   
@@ -177,7 +193,7 @@
 - targets:
     - 192.168.70.16:9100
   labels:
-    name: NSPXMUMDCns006
+    name: NSPXMUMNSUB006
     org: Nodesec
     env: Prod
     role: tool 
