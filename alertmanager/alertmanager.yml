@@ -1,17 +1,22 @@
 receivers:
-  - name: "teams"
+  - name: teams
     msteamsv2_configs:
-      - webhook_url: "https://default62e46a17fc1149a6bd8701cc14bb0f.22.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5af9f890b98a4f68ab0ccff3d7d9b530/triggers/manual/paths/invoke?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=erXnnQGSymJZlLmBRXvgjNbCwu05msZjywjYiDMdOjA"
+      - webhook_url: "https://your-webhook-url"
         send_resolved: true
-
-        title: '{{ .CommonAnnotations.summary }}'
-
+        title: "{{ .CommonAnnotations.summary }}"
         text: |
-          🚨 **Alert:** {{ .CommonLabels.alertname }}
-          **Severity:** {{ .CommonLabels.severity }}
-          **Instance:** {{ .CommonLabels.instance }}
+          🚨 Alert: {{ .CommonLabels.alertname }}
+          Severity: {{ .CommonLabels.severity }}
+          Instance: {{ .CommonLabels.instance }}
 
-          **Description:**
           {{ .CommonAnnotations.description }}
 
-          **Starts At:** {{ .StartsAt }}
+  - name: email
+    email_configs:
+      - to: "gundurao@kevitco.com"
+        from: "gundurao@kevitco.com"
+        smarthost: "smtp.company.com:587"
+        auth_username: "gundurao@kevitco.com"
+        auth_password: "Kulk@rn1"
+        require_tls: true
+        send_resolved: true
