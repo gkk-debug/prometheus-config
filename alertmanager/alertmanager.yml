@@ -17,6 +17,6 @@ receivers:
         from: "gundurao@kevitco.com"
         smarthost: "smtp.company.com:587"
         auth_username: "gundurao@kevitco.com"
-        auth_password: "Kulk@rn1"
+        auth_password: "**"
         require_tls: true
         send_resolved: true
