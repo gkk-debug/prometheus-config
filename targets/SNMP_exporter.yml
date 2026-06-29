@@ -1,0 +1,19 @@
+- targets:
+    - 192.168.10.1
+  labels:
+    name: paloalto-fw
+    org: netspex
+    env: prod
+    role: firewall
+    module: if_mib
+    auth: paloalto_v2
+
+- targets:
+    - 192.168.10.2
+  labels:
+    name: cisco-switch01
+    org: netspex
+    env: prod
+    role: switch
+    module: if_mib
+    auth: cisco_v2
