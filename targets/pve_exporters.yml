@@ -5,3 +5,36 @@
     org: Netspex
     env: prod
     role: proxmox
+
+ - targets:
+    - 192.168.10.28
+  labels:
+    name: NSPXMUMNODE002
+    org: Netspex
+    env: prod
+    role: proxmox
+
+- targets:
+    - 192.168.10.29
+  labels:
+    name: NSPXMUMNODE003
+    org: Netspex
+    env: prod
+    role: proxmox
+
+- targets:
+    - 192.168.10.30
+  labels:
+    name: NSPXMUMNODE004
+    org: Netspex
+    env: prod
+    role: proxmox
+    
+- targets:
+    - 192.168.10.31
+  labels:
+    name: NSPXMUMNODE005
+    org: Netspex
+    env: prod
+    role: proxmox
+    
